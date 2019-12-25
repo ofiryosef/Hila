@@ -1,0 +1,155 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="topes.aspx.cs" Inherits="topes" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+      
+
+      
+      
+       <div class="container">
+       <h3 style="text-align:center ; font-size:37px ; font-family:Arial">הירשמו  </h3>
+   
+      <form name="regform" action=""  method="get" onsubmit="return validateForm()" onreset="resetform()">
+        
+        <label for="fname" class="label"> שם פרטי</label>
+        <input type="text" id="fname" name="firstname" placeholder="שם פרטי...">
+        <span class="errors" id="errorfname"></span> <br />
+
+        <label for="lname" class="label">שם משפחה</label>
+        <input type="text" id="lname" name="lastname" placeholder="שם משפחה...">
+        <span class="errors" id="errorlname"> </span> <br />
+
+        <label for="uemail" class="label">דואר אלקטרוני</label>
+        <input type="text" id="uemail" name="useremail" placeholder="דואל...">
+        <span class="errors" id="errormail"> </span> <br />
+
+        <label for="upassword" class="label">סיסמא</label>
+        <input type="password" id="upassword" name="userpassword" placeholder="סיסמא...">
+        <span class="errors" id="erorpassword"> </span> <br />
+        
+        <label for="age" class="label">גיל</label>
+        <input type="text" id="age" name="age" placeholder="הכנס גילך...">
+        <span class="errors" id="errorage"> </span> <br />
+
+         <div class="container123">
+            <label for="gender" style="margin-left:5px" class="label">מין :</label> 
+        <input style="margin-right:15px; color:red" type="radio" name="gender" 
+            value="זכר1" checked> זכר 
+        <input style="margin-right:15px" type="radio" name="gender" value="נקבה1"> נקבה
+        <input style="margin-right:15px" type="radio" name="gender" value="אחר"> אחר
+        
+        <br /> <br />
+        <label for="gender" style="margin-left:5px" class="label">מעוניין להזמין מסיבת רווקות/הצעת נישואין/אחר?   </label> 
+        <br />
+        <input style="margin-right:15px; color:red" type="radio" name="gender" 
+            value="זכר2"> כן 
+        <input style="margin-right:15px" type="radio" name="gender" value="נקבה2"> לא
+       
+
+        <br /> <br />
+        <label for="cars" style="margin-left:5px" class="label">איך הגעת אלינו?</label> 
+        <select  name="cars">
+            <option value="volvo">חבר</option>
+            <option value="saab">משפחה</option>
+            <option value="fiat">רשת חברתית</option>
+             <option value="audi">פרסומת</option>
+              <option value="audi">אחר</option>
+         </select>
+
+        <br /> <br />             
+
+        <input type="submit" name="submit" value="הרשם">
+        <input type="reset"  name="reset"  value="אפס" >
+      </form>
+   </div>
+     
+
+   
+      </form>
+   </div>
+&nbsp;<script type="text/javascript">
+          function checkfname(fname) {
+              if (fname == "") {
+                  document.getElementById("errorfname").innerHTML = " שדה השם לא יכול להיות ריק";
+                  return false;
+              }
+              return true;
+          }
+
+          function checklname(lname) {
+              if (lname == "") {
+                  document.getElementById("errorlname").innerHTML = " שדה השם לא יכול להיות ריק";
+                  return false;
+              }
+              return true;
+          }
+
+          function checkumail(umail) {
+              if (umail == "") {
+                  document.getElementById("errormail").innerHTML = "שדה המייל לא יכול להיות ריק";
+                  return false;
+              }
+              if ((umail.split("@").length == 2) &&
+               (umail.indexOf("@") != -1) &&
+               (umail.indexOf(".") != 0) &&
+               (umail.lastIndexOf(".") != umail.length - 1) &&
+               (umail.length >= 5 && umail.length <= 30));
+              else {
+                  document.getElementById("errormail").innerHTML = "כתובת מייל לא חוקית בדוק שקיים @ או אם מסתיים/מתחיל בנקודה";
+                  return false;
+              }
+              return true;
+          }
+
+          function checkpassword(password) {
+              return true;
+          }
+
+          function checkage(age) {
+              return true;
+
+          }
+
+          function validateForm() {
+              // קריאת ערכי שדות הטופס הנבחרים
+              resetform();
+              var fname = regform.firstname.value;
+              var lname = regform.lastname.value;
+              var umail = regform.useremail.value;
+              var password = regform.upassword.value;
+              var age = regform.age.value;
+
+
+              // ביצוע בדיקות תקינות על השדות השונים
+              var check1 = checkfname(fname);
+              var check2 = checklname(lname);
+              var check3 = checkumail(umail);
+              var check4 = checkpassword(password);
+              var check5 = checkage(age);
+
+
+              // אם כל הבדיקות תקינות החזר אמת אחרת שקר
+              if (check1 && check2 && check3 && check4 && check5) return true;
+              else return false;
+          }
+          function resetform() {
+              document.getElementById("errorfname").innerHTML = "";
+              document.getElementById("errorlname").innerHTML = "";
+              document.getElementById("errormail").innerHTML = "";
+              document.getElementById("erorpassword").innerHTML = "";
+              document.getElementById("errorage").innerHTML = "";
+              document.getElementById("erorpassword").innerHTML = "";
+          }
+     </script>
+
+
+
+
+
+
+</asp:Content>
+
+

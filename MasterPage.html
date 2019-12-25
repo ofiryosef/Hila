@@ -1,0 +1,180 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Hila Shaul Design</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     
+     
+     <style>
+  
+
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+    font-size:25px;
+    font-family: Harrington;
+}
+
+
+li {
+    float: left;
+    width:260px;
+    height:10px;
+    margin-top:50px;
+}
+
+li2
+{
+   
+    float: left;
+    width:290px;
+    height:50;
+   
+    
+    
+    }
+    
+    li2 a 
+    {
+        
+       display: block;
+    color: Black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+      margin-top:-20px;  
+    
+        
+        }
+        
+    
+        
+
+li a {
+    display: block;
+    color: Black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #e60073;
+    color:White;
+      transition: 1.5s;
+       border-radius: 40px;
+}
+
+.active {
+    background-color:#29293d;
+    color: White;
+}
+    div 
+    {
+      border: none;
+    background-color: none;
+      padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-left: 1200px;
+    margin-right: 200px;
+    margin-top: 40px;
+    font-size:50px;
+    font-weight: 900;
+    font-family:'Bradley Hand ITC';
+}
+    #body  
+    {
+        background-image: url("123.jpg"); 
+        background-repeat: no-repeat; 
+        background-size: 100%; 
+     }
+    
+    div.a {border:hidden;
+           background:none;
+        padding-left: inherit;
+         width:42px;
+         height: 42px;
+         margin-top:-145px;
+         margin-left:-10px;
+        
+        
+        
+    }
+    .hila
+    {
+          list-style-type: none;
+    float:right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:none;
+    font-size:60px;
+    font-family: Arial; 
+        
+        }
+        
+        
+    #par
+    {
+     margin-top:-60px;
+     font-size:30px;
+        
+        
+        }    
+        
+
+
+
+
+
+
+
+
+
+
+
+       
+    </style>
+
+     <ul>
+    
+   <li style="float:right"><a   href="about.aspx"</a>אודות</a></li>
+    <li style="float:right"><a  href="topes.aspx">הירשם</a></li>
+     <li style="float:right"><a href="Marriage.aspx">הפקת הצעת נישואין</a></li>
+     <li2 class=hila ><a        href="Home.aspx"> <img src="logo123.png" width="200" height="200" /></a></li2>
+     <li style="float:right"><a href="babies.aspx">עיצוב ברית/ה</a></li>
+     <li style="float:right"><a href="matanot.aspx">מתנות</a></li>
+     <li style="float:right"><a href="ravakot.aspx">עיצוב מסיבת רווקות</a></li>
+  
+</ul>
+    
+   
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+ 
+
+        
+        </asp:ContentPlaceHolder>
+                <p id="par">
+ <a href="https://www.instagram.com/Hilashauldesign/"> <img src="Instagram_icon.png"  width="50" height="50"/></a>
+ <br />
+ <a href="https://www.facebook.com/hilashauldesign/"> <img src="facebook.png"  width="50" height="50"/></a>
+ 
+ 
+ 
+ </p>
+   
+</body>
+</html>

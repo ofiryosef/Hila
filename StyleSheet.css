@@ -1,0 +1,129 @@
+﻿    
+        
+        body
+        {
+            background-image: url("backgroung.jpg");
+             background-size: 1800px 1350px;
+             background-repeat:no-repeat;
+             background-position: left;
+          
+            
+            }
+         html 
+         {
+            height: 100%;
+            
+         }
+ 
+       
+        .container 
+        {
+            width:30%;
+         
+            margin:auto;
+            border-radius: 30px;
+            background-color: none;
+            padding: 20px;
+            margin-top:-20px;
+            margin-bottom:80px;
+            margin-right:40px;
+             direction:rtl;
+        }
+          .container123 
+        {
+            width:100%;
+         
+            margin:auto;
+            border-radius: 30px;
+            background-color:none;
+            padding: 20px;
+            margin-top:-710px;
+            margin-bottom:80px;
+            margin-right:530px;
+             direction:rtl;
+        }
+        .container1 {
+            width: 40%;
+         
+            margin: auto;
+            border-radius: 5px;
+            background-color: none;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 80px;
+             direction:rtl;
+        }
+        
+        .container input[type=text], input[type=password], 
+        select, textarea 
+        {
+        width: 89%;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 5px;
+        resize: vertical;
+        font-family:Arial;
+        font-size:30px;
+    height: 11px;
+     direction:rtl;
+}
+        
+        .errors {
+        width: 50%;
+        padding: 5px;
+        color:Red;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-family:Arial;
+        font-size:30px;
+         direction:rtl;
+        }
+
+        input[type=submit] {
+        background-color:  #e60073;
+        color: white;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-family:Arial;
+        font-size:32px;
+         direction:rtl;
+        }
+        
+        input[type=reset] {
+        background-color:  #e60073;
+        color: white;
+        padding: 10px 10px;
+        margin-right:20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-family:Arial;
+        font-size:34px;
+         direction:rtl;
+        }
+        .label 
+        {
+            font-family:Arial;
+            font-size:50px;
+            color:#e60073;
+            direction: rtl;
+        }
+        
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+/* Horizontal menu CSS */
+ 
+
+         .img1 {
+  width: 280px;
+  height:280px;
+  margin-right:1000px;
+  margin-top: 200px;
+}
